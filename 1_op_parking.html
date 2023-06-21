@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ALFONZO LOPEZ</title>
+  <!-- icono </>
+    ================================================== -->
+    <link rel="shortcut icon" href="img/puntomaps.png" type="image/png">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #f0f0f0, #3000b4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      position: relative;
+      text-align: center;
+    }
+
+    .mapouter {
+      display: inline-block;
+      position: relative;
+      text-align: right;
+      height: 560px;
+      width: 820px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .gmap_canvas {
+      overflow: hidden;
+      background: none !important;
+      height: 560px;
+      width: 820px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+    }
+
+    .button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      background-color: #2a12ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="mapouter">
+      <div class="gmap_canvas">
+        <iframe width="820" height="560" id="gmap_canvas" src="https://maps.google.com/maps?q=parqueadero+publico+alfonzo+lopes&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      </div>
+    </div>
+    <div class="buttons">
+      <a class="button" href="cuestionario.html">hacer reservacion</a>
+      <a class="button" href="index.html">volver al inicio</a>
+    </div>
+  </div>
+</body>
+</html>

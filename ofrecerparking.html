@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <title>OFRECER PARKING</title>
+
+
+<!-- icono </>
+    ================================================== -->
+    <link rel="shortcut icon" href="img/puntomaps.png" type="image/png">
+<head>
+    <style>
+        body {
+            background: linear-gradient(#003b31, #9d88b3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background: linear-gradient(#f9f9f9, #585454);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .button {
+            background: linear-gradient(#4CAF50, #008000);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        .back-button {
+            background: linear-gradient(#ff4d4d, #ff0000);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        .fancy-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f34500;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h2 class="fancy-text">OPCIONES DE PARKING</h2>
+        
+        <ul style="list-style-type: none; display: flex; justify-content: space-between;">
+            <li><a href="1_op_parking.html"><button class="button">PARKING ALFONZO LOPEZ</button></a></li>
+            <li><a href="https://www.ejemplo2.com"><button class="button">Opción 2</button></a></li>
+            <li><a href="https://www.ejemplo3.com"><button class="button">Opción 3</button></a></li>
+            <li><a href="https://www.ejemplo4.com"><button class="button">Opción 4</button></a></li>
+        </ul>
+    
+        <button class="back-button" onclick="history.go(-1)">Volver al inicio</button>
+
+    </div>
+</body>
+</html>

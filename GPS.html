@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MAPA</title>
+  <!-- icono </>
+    ================================================== -->
+    <link rel="shortcut icon" href="img/puntomaps.png" type="image/png">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #002b88, #5a0000);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    
+    #map {
+      width: 600px;
+      height: 400px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      margin-bottom: 20px;
+    }
+    
+    .button {
+      padding: 10px 20px;
+      background: linear-gradient(to bottom right, #ffecd0, #b10000);
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <a href="index.html" class="button">Volver</a>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
+  <script>
+    function initMap() {
+      var mapOptions = {
+        center: { lat: 40.7128, lng: -74.0060 },
+        zoom: 12
+      };
+
+      var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    }
+  </script>
+</body>
+</html>

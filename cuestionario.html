@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cuestionario de Reserva</title>
+  <!-- icono </>
+    ================================================== -->
+    <link rel="shortcut icon" href="img/puntomaps.png" type="image/png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #0042f8, #690000);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff;
+      margin-top: 40px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    input[type="text"], input[type="date"] {
+      width: 100%;
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #f5f5f5;
+      color: #000000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .confirmation {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      display: none;
+    }
+
+    .confirmation h2 {
+      color: #333;
+    }
+
+    .confirmation p {
+      color: #666;
+      margin-bottom: 5px;
+    }
+
+    .finish-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .finish-button a {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #fff;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .finish-button a:hover {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <h1>Formulario de Reserva</h1>
+  <form id="reservationForm" onsubmit="return false;">
+    <label for="name">Nombre de la persona:</label>
+    <input type="text" id="name" required>
+
+    <label for="carPlate">Placa del carro:</label>
+    <input type="text" id="carPlate" required>
+
+    <label for="entryDate">Fecha de entrada:</label>
+    <input type="date" id="entryDate" required>
+
+    <label for="exitDate">Fecha de salida:</label>
+    <input type="date" id="exitDate" required>
+
+    <button onclick="generateConfirmation()">Confirmar Reserva</button>
+  </form>
+
+  <div id="confirmationContainer" class="confirmation">
+    <h2>Confirmación de Reserva</h2>
+    <p id="confirmationName"></p>
+    <p id="confirmationCarPlate"></p>
+    <p id="confirmationDates"></p>
+
+    <div class="finish-button">
+      <a href="index.html">Finalizar Reserva</a>
+    </div>
+  </div>
+
+  <script>
+    function generateConfirmation() {
+      var name = document.getElementById('name').value;
+      var carPlate = document.getElementById('carPlate').value;
+      var entryDate = document.getElementById('entryDate').value;
+      var exitDate = document.getElementById('exitDate').value;
+
+      document.getElementById('confirmationName').innerHTML = 'Nombre: ' + name;
+      document.getElementById('confirmationCarPlate').innerHTML = 'Placa del carro: ' + carPlate;
+      document.getElementById('confirmationDates').innerHTML = 'Fechas: ' + entryDate + ' - ' + exitDate;
+
+      document.getElementById('reservationForm').style.display = 'none';
+      document.getElementById('confirmationContainer').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
